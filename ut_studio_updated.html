@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT STUDIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 390px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .menu-icon {
+            cursor: pointer;
+            width: 20px;
+            height: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-icon span {
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+        }
+        .new-arrivals {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .number {
+            font-size: 12px;
+            margin: 0 15px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .product-image {
+            height: 300px;
+            margin-bottom: 15px;
+        }
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #333;
+        }
+        .prev-arrow, .next-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            color: #999;
+        }
+        .prev-arrow {
+            left: 10px;
+        }
+        .next-arrow {
+            right: 10px;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #555;
+        }
+        .promotions {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 8px 0;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 390px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">PEPERFORTUNE</div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <div class="new-arrivals">
+            <div class="heading">
+                <div class="number">01</div>
+                <div class="title">NEW<br>ARRIVALS</div>
+                <div class="number">06</div>
+            </div>
+
+            <div class="carousel">
+                <div class="prev-arrow">←</div>
+                <div class="carousel-inner">
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="0">
+                        <img src="https://i.ibb.co/MxJzVn4T/file-00000000fb546246912dba9a7da7eec0.png" alt="No Reason Circle Hoodie" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price">€38</div>
+                    </a>
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="1">
+                        <img src="https://i.ibb.co/Xr1z2wMy/oversized-heavyweight-t-shirt-black-back-68114344633f4.png" alt="SOON" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price">€30</div>
+                    </a>
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="2">
+                        <img src="/api/placeholder/200/300" alt="SOON" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price"></div>
+                    </a>
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="3">
+                        <img src="/api/placeholder/200/300" alt="SOON" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price"></div>
+                    </a>
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="4">
+                        <img src="/api/placeholder/200/300" alt="SOON" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price"></div>
+                    </a>
+                    <a href="https://forms.gle/fp6JHyKKNzEpCVeMA" class="carousel-item" data-index="5">
+                        <img src="/api/placeholder/200/300" alt="SOON" class="product-image">
+                        <div class="product-name"></div>
+                        <div class="product-price"></div>
+                    </a>
+                </div>
+                <div class="next-arrow">→</div>
+            </div>
+
+            <div class="carousel-indicators">
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+        </div>
+
+        <div class="promotions">
+            <div>GET NEWSLETTER DM</div>
+            <div>NOW</div>
+            <div>NEW COLLECTION</div>
+            <div>BESTSELLER</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevArrow = document.querySelector('.prev-arrow');
+            const nextArrow = document.querySelector('.next-arrow');
+            let currentIndex = 0;
+            updateCarousel();
+            function updateCarousel() {
+                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            prevArrow.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+            nextArrow.addEventListener('click', function() {
+                if (currentIndex < 5) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
